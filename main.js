@@ -24,5 +24,15 @@ CREATE A FUNCTION GET_POKEMON_ABILITY_NAME()
     FETCH GET_POKEMON_ABILITY_EFFECT OF SEARCHED POCKEMON
     RETURN GET_POKEMON_ABILITY_EFFECT OF POKEMON
     DISPLAY GET_POKEMON_ABILITY_EFFECT OF POKEMON
-*
-/
+*/
+
+
+async function getPokemonName() {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+    const data = await response.json();
+    console.log(data);
+
+}
+getPokemonName();
+
+
